@@ -1,0 +1,14 @@
+a, b = input().split(" ")
+a = int(a)
+b = int(b)
+series = []
+f1 = 1
+s1 = 2
+t1 = 3
+while t1 <= b:
+    t1 = f1 + s1
+    if (t1 >= a) and (t1 <= b):
+        series.append(t1)
+    f1 = s1
+    s1 = t1
+print(len(series))

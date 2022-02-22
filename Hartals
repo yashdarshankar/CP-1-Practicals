@@ -1,0 +1,43 @@
+output = []
+for i1 in range(int(input())):
+    n = int(input())
+    p = int(input())
+    h = []
+    temp = 6
+    list1 = []
+    for i in range(0, p, 1):
+        h.append(int(input()))
+    for j in range(len(h)):
+        i = 1
+        while True:
+            if h[j] * i > n:
+                break
+            if h[j] * i not in list1:
+                list1.append((h[j] * i))
+            i += 1
+
+    while temp <= n:
+        for k in list1:
+            if k == temp or k == temp + 1:
+                list1.remove(k)
+        temp += 7
+
+    output.append(len(list1))
+print("-----------------------------output---------------------------------------------")
+for i in output:
+    print(i)
+'''
+Sample Input
+2
+14
+3
+3
+4
+8
+100
+4
+12
+15
+25
+40
+'''

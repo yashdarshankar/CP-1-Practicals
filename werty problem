@@ -1,0 +1,14 @@
+inp = input("Enter the input :-")
+str1 = ""
+for j in inp:
+    a = ["QWERTYUIOP[]", "ASDFGHJKL;'", "ZXCVBNM,./", "1234567890-=", "qwertyuiop", "asdfghjkl", "zxcvbnm"]
+    if j == " ":
+        str1 += " "
+    elif j == "A" or j == "Q" or j == "Z":
+        continue
+    for j1 in a:
+        for i1 in j1:
+            if j == i1:
+                str1 += j1[j1.index(i1) - 1]
+
+print(str1)
